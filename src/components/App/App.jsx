@@ -92,7 +92,7 @@ export default function App() {
             />
           )}
           {images.length > 0 && !loading && page >= totalPages && (
-            <b>End of collection</b>
+            <b>The End</b>
           )}
         </>
       )}
