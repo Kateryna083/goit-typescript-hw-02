@@ -1,14 +1,14 @@
-// import css from "./ImageGallery.module.css";
+import ImageCard from "../ImageCard/ImageCard";
+import css from "./ImageGallery.module.css";
 
-export default function ImageGallery() {
+export default function ImageGallery({ images, onOpenModal }) {
   return (
-    <ul>
-      {/* Набір елементів списку із зображеннями */}
-      <li>
-        <div>
-          <img src="" alt="" />
-        </div>
-      </li>
+    <ul className={css.gallery}>
+      {images.map((image) => (
+        <li key={image.id} className={css.galleryItem}>
+          <ImageCard image={image} onOpenModal={onOpenModal} />
+        </li>
+      ))}
     </ul>
   );
 }
