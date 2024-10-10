@@ -6,7 +6,7 @@ interface LoadMoreProps {
   loadMoreRef: Ref<HTMLButtonElement>;
 }
 
-export const LoadMore: FC<LoadMoreProps> = ({ onClick, loadMoreRef }) => {
+export const LoadMoreBtn: FC<LoadMoreProps> = ({ onClick, loadMoreRef }) => {
   return (
     <button onClick={onClick} className={css.loadMoreBtn} ref={loadMoreRef}>
       Load more

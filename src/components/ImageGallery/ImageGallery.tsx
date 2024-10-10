@@ -5,7 +5,7 @@ import css from "./ImageGallery.module.css";
 
 interface ImageGalleryProps {
   images: Image[];
-  onOpenModal: () => void;
+  onOpenModal: (image: Image) => void;
 }
 
 export const ImageGallery: FC<ImageGalleryProps> = ({
