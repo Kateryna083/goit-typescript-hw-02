@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, FC } from "react";
 
 import "./App.css";
 import SearchBAr from "../SearchBar/SearchBar";
@@ -9,9 +9,10 @@ import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import toast, { Toaster } from "react-hot-toast";
+import { Image } from "./type";
 
-export default function App() {
-  const [images, setImages] = useState([]);
+export const App: FC = () => {
+  const [images, setImages] = useState<Image>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [modalImage, setModalImage] = useState(null);
@@ -105,4 +106,4 @@ export default function App() {
       )}
     </>
   );
-}
+};
