@@ -7,7 +7,7 @@ interface SearchBarProps {
 }
 
 export const SearchBar: FC<SearchBarProps> = ({ onSearch }) => {
-  const handleSubmit = (evt: FormEvent<HTMLFieldSetElement>) => {
+  const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     const form = evt.currentTarget;
     const topic = (
